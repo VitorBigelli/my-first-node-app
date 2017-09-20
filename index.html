@@ -23,17 +23,31 @@
 	</header>
 
 	<main>
-		<section id="about-me">
-			<h2> About me </h2>
-			<p> </p>
-			<p>Skils: </p>
-			<ul data-bind="foreach: aboutme.skills">
-				<li data-bind="text: $data"></li>
-			</ul>
+		<h2> ABOUT ME </h2>
+		<p> A brief description of my capabilities and my personality. </p>
+		<section id="about-me" data-bind="with: aboutme">
+			<div id="skills">
+				Skills:
+				<ul data-bind="foreach: skills">
+					<li data-bind="text: $data"></li>
+				</ul>
+			</div>
+			<img src="" id="personal-img" data-bind="attr: {src: imgUrl}">
 		</section>
 
-		<section id="education">
-			
+		<h2> EDUCATION </h2>
+
+		<h3> Schools </h3>
+		<section id="education" data-bind="foreach: schools">
+			<h4 data-bind="text: name"></h4>
+			<p class="info">
+
+			</p>
+		</section>
+
+		<h3> Online Courses </h3>
+		<section id="online-courses" data-bind="foreach: onlineCourses">
+			<h4 data-bind="text: title"></h4>			
 		</section>
 
 		<section id="projects">

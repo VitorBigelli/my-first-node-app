@@ -9,19 +9,31 @@ footer {
 }
 
 nav {
+	position: absolute;
 	height: 40px;
-	background-color: #888;
+	background-color: transparent;
 }
 
 header {
-	height: 150px;
+	height: 175px;
 	background-color: #fff;
-	background-image: url('http://placehold.it/320x150');
+	background-image: url('https://placekitten.com/320/175');
+	text-align: center;
+	vertical-align: center;
 }
 
 main {
 	height: 500px;
 	background-color: #ddd;
+	text-align: center;
+}
+
+section {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 footer {
@@ -34,4 +46,19 @@ h2,
 h3,
 h4 {
 	margin: 0;
+	padding-top: 20px;
+}
+
+h1 {
+	padding-top: 60px;
+}
+
+#personal-img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+#skills {
+	width: 50%;
 }

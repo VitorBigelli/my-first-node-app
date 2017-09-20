@@ -92,16 +92,28 @@ var model = {
 	],
 
 	aboutme: {
-		skills: ["HTML", "CSS", "JavaScript"]
+		skills: ["HTML", "CSS", "JavaScript"],
+		imgUrl: "images/profile-img.jpg"
+	},
+
+	contacts: {
+		"email": "vitorbigelli@hotmail.com",
+        "mobile": "+5543 99145-4536",
+        "github": "VitorBigelli",
+        "twitter": "@_vitorbigellli",
+        "location": "Londrina, PR, Brasil"
 	}
 };
-
 
 var ViewModel = function() {
 	this.bio = model.bio;
 	this.aboutme = model.aboutme;
+	this.schools = model.schools; 
+	this.onlineCourses = model.onlineCourses;
+	this.projects = model.projects;
+	this.works = model.works;
+	this.contacts = model.contacts;
 }
-
 
 ko.applyBindings(ViewModel);
 
