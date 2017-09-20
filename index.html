@@ -26,29 +26,36 @@
 		<h2> ABOUT ME </h2>
 		<p> A brief description of my capabilities and my personality. </p>
 		<section id="about-me" data-bind="with: aboutme">
+			<div id="profile-img">
+				<img src="" id="img" data-bind="attr: {src: imgUrl}">
+			</div>
+			
 			<div id="skills">
 				Skills:
 				<ul data-bind="foreach: skills">
 					<li data-bind="text: $data"></li>
 				</ul>
 			</div>
-			<img src="" id="personal-img" data-bind="attr: {src: imgUrl}">
+
 		</section>
+
+		<hr>
 
 		<h2> EDUCATION </h2>
 
 		<h3> Schools </h3>
 		<section id="education" data-bind="foreach: schools">
 			<h4 data-bind="text: name"></h4>
-			<p class="info">
-
-			</p>
+			<div class="location"><span data-bind="text: location"></span></div>
+			<div class="date"><span data-bind="text: dates"></span></div>
 		</section>
 
 		<h3> Online Courses </h3>
 		<section id="online-courses" data-bind="foreach: onlineCourses">
 			<h4 data-bind="text: title"></h4>			
 		</section>
+
+		<hr>
 
 		<section id="projects">
 			
