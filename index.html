@@ -6,8 +6,7 @@
 
 	<title>Vitor Bigelli's Portfolio</title>
 
-	<link rel="stylesheet" href="styles/style.css">
-	<script src="scripts/app.js"></script>	
+	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
 
@@ -17,21 +16,36 @@
 	<aside>
 	</aside>
 
-	<header>
-		<h1> VITOR BIGELLI </h1>
-		<p> Front-End Web Developer </p>
+	<header id="header" data-bind="with: bio">
+			<h1 data-bind="text: name"></h1>
+			<p data-bind="text: role"></p>
+		</script>
 	</header>
 
 	<main>
+		<section id="about-me">
+			<h2> About me </h2>
+			<p> </p>
+			<p>Skils: </p>
+			<ul data-bind="foreach: aboutme.skills">
+				<li data-bind="text: $data"></li>
+			</ul>
+		</section>
 
-		<article>
+		<section id="education">
 			
-		</article>
+		</section>
+
+		<section id="projects">
+			
+		</section>
 
 	</main>
 
 	<footer>
 	</footer>
 
+	<script src="scripts/knockout-3.4.2.js"></script>
+	<script src="scripts/app.js"></script>
 </body>
 </html>
