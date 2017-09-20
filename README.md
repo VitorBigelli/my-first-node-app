@@ -1,2 +1,3 @@
-# my-first-node-app
-A functional application using Node.js and Express.
+# Portfolio Website
+
+A complete interactive and functional portfolio website developed using Knockout.js, Node.js and Express.
