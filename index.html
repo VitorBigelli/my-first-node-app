@@ -23,8 +23,10 @@
 	</header>
 
 	<main>
+
 		<h2> ABOUT ME </h2>
 		<p> A brief description of my capabilities and my personality. </p>
+
 		<section id="about-me" data-bind="with: aboutme">
 			<div id="profile-img">
 				<img src="" id="img" data-bind="attr: {src: imgUrl}">
@@ -36,7 +38,6 @@
 					<li data-bind="text: $data"></li>
 				</ul>
 			</div>
-
 		</section>
 
 		<hr>
@@ -52,7 +53,11 @@
 
 		<h3> Online Courses </h3>
 		<section id="online-courses" data-bind="foreach: onlineCourses">
-			<h4 data-bind="text: title"></h4>			
+			<h4 data-bind="text: title"></h4>
+			<div class="location"><span data-bind="text: school"></span></div>
+			<div class="date"><span data-bind="text: dates"></span></div>
+			<img src="" data-bind="attr: {src: certificateImg}" class="certificate-img">
+		
 		</section>
 
 		<hr>

@@ -24,23 +24,26 @@ var model = {
 
 	onlineCourses: [
 		{
-            "title": "Front-End Web Developer",
+            "title": "Front-End Web Developer Nanodegree",
             "school": "Udacity",
             "dates": "September 2017",
-            "url": "https://br.udacity.com/course/front-end-web-developer-nanodegree--nd001/?gclid=EAIaIQobChMI0_nQ-4Li1QIVTgWRCh1Nrwd7EAAYASAAEgLm6vD_BwE"
+            "certificateImg": "images/certificate3.png"
         },
         {
-            "title": "Intro to Computational Thinking and Data Science",
+            "title": "6.00.2x Intro to Computational Thinking and Data Science",
             "school": "edx/MITx",
             "dates": "March 2017",
-            "url": "https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-5"
+            "certificateImg": "images/certificate2.png",
+            "url": "https://courses.edx.org/certificates/49f1c7f0f15c41cdaf998b8c29c70dbe"
         },
         {
-            "title": "Intro to Computer Science and Programming Using Python",
+            "title": "6.00.1x Intro to Computer Science and Programming Using Python",
             "school": "edX/MITx",
             "dates": "February 2017",
-            "url": "https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11"
-		    }], 
+            "certificate_id": "52ecdf10307c4100832abd7ca7d9f640",
+            "certificateImg": "images/certificate1.png",
+		    }
+	], 
 
 	projects: [
 	    {
