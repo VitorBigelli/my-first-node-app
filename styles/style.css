@@ -1,6 +1,37 @@
 html, 
-body {
+body,
+nav,
+header,
+main,
+footer {
 	width: 100%;
 	margin: 0; 
-	padding: 0;
+}
+
+nav {
+	height: 40px;
+	background-color: #888;
+}
+
+header {
+	height: 150px;
+	background-color: #fff;
+	background-image: url('http://placehold.it/320x150');
+}
+
+main {
+	height: 500px;
+	background-color: #ddd;
+}
+
+footer {
+	height: 40px;
+	background-color: #888;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
 }
