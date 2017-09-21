@@ -6,6 +6,8 @@ main,
 footer {
 	width: 100%;
 	margin: 0; 
+	color: #555;
+	font-family: 'PT Sans', sans-serif;
 }
 
 nav {
@@ -17,7 +19,8 @@ nav {
 header {
 	height: 175px;
 	background-color: #fff;
-	background-image: url('https://placekitten.com/320/175');
+	background-size: 100%;
+	background-image: url('../images/header.jpg');
 	text-align: center;
 	vertical-align: center;
 }
@@ -51,6 +54,7 @@ h4 {
 
 h1 {
 	padding-top: 60px;
+	color: #f3f3f3;
 }
 
 h2 {
@@ -65,12 +69,14 @@ h3 {
 h4 {
 	margin-top: 15px;
 	padding: 5px;
-	background-color: #999;
-	color: #fff;
+	color: #999;
 	text-align: left;
 	font-size: 1.1em;
 }
 
+#role {
+	color: #f3f3f3;
+}
 
 #profile-img {
 	width: 50%;

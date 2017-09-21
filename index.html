@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<title>Vitor Bigelli's Portfolio</title>
-
+	<link async href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
@@ -16,9 +16,13 @@
 	<aside>
 	</aside>
 
-	<header id="header" data-bind="with: bio">
-			<h1 data-bind="text: name"></h1>
-			<p data-bind="text: role"></p>
+
+	<header id="canvas" data-bind="with: bio">		
+		</canvas>
+
+
+		<h1 data-bind="text: name"></h1>
+		<p data-bind="text: role" id="role"></p>
 		</script>
 	</header>
 
@@ -54,9 +58,9 @@
 		<h3> Online Courses </h3>
 		<section id="online-courses" data-bind="foreach: onlineCourses">
 			<h4 data-bind="text: title"></h4>
+			<img src="" data-bind="attr: {src: certificateImg}" class="certificate-img">
 			<div class="location"><span data-bind="text: school"></span></div>
 			<div class="date"><span data-bind="text: dates"></span></div>
-			<img src="" data-bind="attr: {src: certificateImg}" class="certificate-img">
 		
 		</section>
 
