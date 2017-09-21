@@ -2,7 +2,7 @@ var model = {
 	
 	bio: {
 		"name": "VITOR BIGELLI",
-		"role": "Fron-End Web Developer"
+		"role": "Front-End Web Developer"
 	}, 
 
 	schools: [
