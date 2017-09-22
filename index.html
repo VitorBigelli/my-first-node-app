@@ -6,6 +6,7 @@
 
 	<title>Vitor Bigelli's Portfolio</title>
 	<link async href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link async rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
@@ -77,6 +78,25 @@
 
 		<hr>
 
+		<h2> CONTACT ME </h3>
+		<section id="contact-me" data-bind="with: contacts">
+			<ul id="contacts"> 
+				<li><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> <span data-bind="text: email"></span></li>
+				<li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i> <span data-bind="text: mobile"></span></li>
+				<li>
+					<i class="fa fa-github fa-2x" aria-hidden="true"></i>
+					<a href="" data-bind="attr: {href: github.url">
+						<span data-bind="text: github.user"></span>
+					</a>
+				</li>
+				<li>
+					<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+					<a href="" data-bind="attr: {href: twitter.url">
+						<span data-bind="text: twitter.user"></span>
+					</a>
+				</li>
+			</ul>
+		</section>
 
 	</main>
 

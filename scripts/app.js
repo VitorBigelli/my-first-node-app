@@ -102,8 +102,14 @@ var model = {
 	contacts: {
 		"email": "vitorbigelli@hotmail.com",
         "mobile": "+5543 99145-4536",
-        "github": "VitorBigelli",
-        "twitter": "@_vitorbigellli",
+        "github": {
+        	"user": "VitorBigelli",
+        	"url": "https://github.com/VitoBigelli"
+        },
+        "twitter": {
+        	"user": "@_vitorbigelli",
+        	"url": "https://twitter.com/_vitorbigelli"
+       	},
         "location": "Londrina, PR, Brasil"
 	}
 };
