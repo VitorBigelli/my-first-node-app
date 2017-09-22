@@ -1,7 +1,7 @@
 var model = {
 	
 	bio: {
-		"name": "VITOR BIGELLI",
+		"name": "Vitor Bigelli",
 		"role": "Front-End Web Developer"
 	}, 
 
@@ -50,35 +50,35 @@ var model = {
             "title": "Health Tracker",
             "dates": "September, 2017",
             "description": "A single page app that tracks the user's calorie intake developted using Backbone.",
-            "images": ["http://placehold.it/280x150"], 
+            "image": "http://placehold.it/200x150", 
             "url": "https://github.com/VitorBigelli/health_tracker"
         },
 	    {
             "title": "Neighborhood map",
             "dates": "September, 2017",
             "description": "An interactive map of the neighbourhood of Silicon Valley, CA, United States using Google Maps API's.",
-            "images": ["http://placehold.it/280x150"], 
+            "image": "http://placehold.it/200x150", 
             "url": "https://github.com/VitorBigelli/silicon_valley_neighborhood_map"
         },
         {
             "title": "Build a Portfolio site",
             "dates": "August, 2017",
             "description": "Given a pdf mockup of a website from a designer, translate it to a real website using your HTML and CSS skills.",
-            "images": ["http://placehold.it/280x150"], 
+            "image": "http://placehold.it/200x150", 
             "url": "https://github.com/VitorBigelli/WFED_PortfolioSite"
         },
         {
             "title": "Animal trading card",
             "dates": "August, 2017",
             "description": "Use HTML and CSS to create a web-based trading card depicting my favorite animal",
-            "images": ["http://placehold.it/280x150"],
+            "image": "http://placehold.it/200x150", 
             "url": "https://github.com/VitorBigelli/WFED_AnimalTradingCards" 
         },
 		{
             "title": "Mockup to Article",
             "dates": "August, 2017",
             "description": "Convert a mockup of a blog article into a real web page.",
-            "images": ["http://placehold.it/280x150"],
+            "image": "http://placehold.it/200x150", 
             "url": "https://github.com/VitorBigelli/WFED_MockupToArticle"
         },
 

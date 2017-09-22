@@ -22,10 +22,7 @@
 	</aside>
 
 
-	<header id="canvas" data-bind="with: bio">		
-		</canvas>
-
-
+	<header data-bind="with: bio">		
 		<h1 data-bind="text: name"></h1>
 		<p data-bind="text: role" id="role"></p>
 		</script>
@@ -35,7 +32,6 @@
 
 		<h2> ABOUT ME </h2>
 		<p> A brief description of my capabilities and my personality. </p>
-
 		<section id="about-me" data-bind="with: aboutme">
 			<div id="profile-img">
 				<img src="" id="img" data-bind="attr: {src: imgUrl}">
@@ -63,17 +59,24 @@
 		<h3> Online Courses </h3>
 		<section id="online-courses" data-bind="foreach: onlineCourses">
 			<h4 data-bind="text: title"></h4>
-			<img src="" data-bind="attr: {src: certificateImg}" class="certificate-img">
 			<div class="location"><span data-bind="text: school"></span></div>
 			<div class="date"><span data-bind="text: dates"></span></div>
-		
+			<img src="" data-bind="attr: {src: certificateImg}" class="certificate-img">
 		</section>
 
 		<hr>
 
-		<section id="projects">
-			
+		<h2> PROJECTS </h3>
+		<section id="projects" data-bind="foreach: projects">
+			<h4 data-bind="text: title"></h4>
+			<div class="location"></div>
+			<div class="date"><span data-bind="text: dates"></span></div>
+			<p data-bind="text: description"></p>
+			<img src="" data-bind="attr: {src: image}" class="certificate-img">
 		</section>
+
+		<hr>
+
 
 	</main>
 
