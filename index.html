@@ -12,14 +12,33 @@
 <body>
 
 	<nav>
-		<div id="hamburger-menu">
+		<div id="hamburger-menu" data-bind="click: toggleAsideClass">
 			<div class="hamburger-slice"></div>
 			<div class="hamburger-slice"></div>
 			<div class="hamburger-slice"></div>
 		</div>
 	</nav>
 
-	<aside>
+	<aside data-bind="css: {hidden: hideAside}">
+		<section id="contact-me" data-bind="with: contacts">
+			<ul id="contacts"> 
+				<li><i class="fa fa-envelope" aria-hidden="true"></i> <span data-bind="text: email"></span></li>
+				<li><i class="fa fa-whatsapp" aria-hidden="true"></i> <span data-bind="text: mobile"></span></li>
+				<li>
+					<i class="fa fa-github" aria-hidden="true"></i>
+					<a href="" data-bind="attr: {href: github.url">
+						<span data-bind="text: github.user"></span>
+					</a>
+				</li>
+				<li>
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<a href="" data-bind="attr: {href: twitter.url">
+						<span data-bind="text: twitter.user"></span>
+					</a>
+				</li>
+			</ul>
+		</section>
+
 	</aside>
 
 

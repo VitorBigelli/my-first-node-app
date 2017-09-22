@@ -1,7 +1,7 @@
 var model = {
 	
 	bio: {
-		"name": "Vitor Bigelli",
+		"name": "VITOR BIGELLI",
 		"role": "Front-End Web Developer"
 	}, 
 
@@ -115,6 +115,9 @@ var model = {
 };
 
 var ViewModel = function() {
+
+	var self = this;
+
 	this.bio = model.bio;
 	this.aboutme = model.aboutme;
 	this.schools = model.schools; 
@@ -122,6 +125,16 @@ var ViewModel = function() {
 	this.projects = model.projects;
 	this.works = model.works;
 	this.contacts = model.contacts;
+	this.hideAside = ko.observable(true) ; 
+
+	this.toggleAsideClass = function() {
+		if (self.hideAside()) {
+			self.hideAside(false);
+		} else {
+			self.hideAside(true);
+		}
+		return self.hideAside();
+	}
 }
 
 ko.applyBindings(ViewModel);
