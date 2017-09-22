@@ -12,7 +12,6 @@ footer {
 
 body {
 	background-color: #fbfbfb;
-
 }
 
 nav {
@@ -48,8 +47,11 @@ section {
 }
 
 footer {
-	height: 40px;
+	height: 30px;
+	padding: 10px 0;
 	background-color: #888;
+	color: #fff;
+	text-align: center;
 }
 
 h1,
