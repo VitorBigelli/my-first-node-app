@@ -98,6 +98,27 @@ aside {
 
 }
 
+form {
+	width: 100%;
+	text-align: left;
+}
+
+
+
+input,
+textarea {
+	width: 100%;
+}
+
+textarea {
+	height: 100px;
+}
+
+#form-submit {
+	width: 50px;
+	float: right;
+}
+
 .hidden {
 	transform: translateY(-100%);
 	transition: 0.4s;
