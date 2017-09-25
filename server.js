@@ -35,14 +35,14 @@ app.get('/messages', function(request, response) {
 });
 
 app.post('/messages', function(request, response) {
-	console.log(request.body);
+	
 	db.run("INSERT INTO Messages (Name, Email, Subject, Message) VALUES (?, ?, ?, ?) ", request.body.Name, request.body.Email, request.body.Subject, request.body.Message);
-
+	response.redirect('index.html');
 });
 
 app.delete('/message', function(request, response) {
 
-	db.run("DELET FROM Messages WHERE ID = ?", request.body)
+	db.run("DELET FROM Messages WHERE ID = (?)", request.body)
 
 });
 

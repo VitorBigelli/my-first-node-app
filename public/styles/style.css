@@ -114,6 +114,10 @@ textarea {
 	height: 100px;
 }
 
+.hide {
+	display: none;
+}
+
 #form-submit {
 	width: 50px;
 	float: right;

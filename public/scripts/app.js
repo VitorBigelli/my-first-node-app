@@ -154,13 +154,16 @@ var ViewModel = function() {
                 "Message": self.formMessage.value
             }
 
-            $.ajax({
-                url: '/messages', 
-                type: 'POST',
-                contentType: "application/json",
-                data: JSON.stringify(data)
+            $.post('/messages', data)
+            .done( function(data) {
+                $("form").addClass("hide");
+                $("#message").html("<p> Message received. </p>")
+            })
+            .fail( function() {
+                alert("An error occour. Please, try again later.");
             });
         }
+        return;
     });
 }
 
