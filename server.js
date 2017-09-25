@@ -37,7 +37,7 @@ app.post('/messages', function(request, response) {
 
 app.delete('/message', function(request, response) {
 
-	db.run("DELET FROM Messages WHERE ?", request.body)
+	db.run("DELET FROM Messages WHERE ID = ?", request.body)
 
 });
 
