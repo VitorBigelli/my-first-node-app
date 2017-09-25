@@ -27,7 +27,7 @@ app.use( express.static( __dirname + '/public'));
 app.get('/messages', function(request, response) {
 	
 	db.all("SELECT * FROM Messages", function(err, rows) {
-		console.log('GET Messages: Database currently contains the following: '  + rows);
+		console.log('GET Messages: Database currently contains the following: ', rows);
 
 		response.send(rows);
 	});
@@ -35,7 +35,9 @@ app.get('/messages', function(request, response) {
 });
 
 app.post('/messages', function(request, response) {
-	
+	console.log(request.body);
+	db.run("INSERT INTO Messages (Name, Email, Subject, Message) VALUES (?, ?, ?, ?) ", request.body.Name, request.body.Email, request.body.Subject, request.body.Message);
+
 });
 
 app.delete('/message', function(request, response) {

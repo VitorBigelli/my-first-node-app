@@ -148,10 +148,10 @@ var ViewModel = function() {
         }
         else {
             var data = {
-                Name: self.formName.value,
-                Email: self.formEmail.value,
-                Subject: self.formSubject.value,
-                Message: self.formMessage.value
+                "Name": self.formName.value,
+                "Email": self.formEmail.value,
+                "Subject": self.formSubject.value,
+                "Message": self.formMessage.value
             }
 
             $.ajax({
