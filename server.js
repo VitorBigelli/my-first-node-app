@@ -10,20 +10,34 @@ app.listen(3000, function() {
 	console.log("Server is listening on port 3000");
 })
 
+var sqlite3 = require('sqlite3');
+
+var db = new sqlite3.Database('PortfolioDatabase.db');
+
 // 
-app.get(`/`, function(request, response) {
+app.get('/', function(request, response) {
 	response.send('Return the index page');
 });
 
-app.get("/messages", function(request, response) {
-	response.send('Return a list of all stored messages');
+app.get('/messages', function(request, response) {
+	
+	db.all("SELECT * FROM Messages", function(err, rows) {
+		console.log('GET Messages: Database currently contains the following: '  + rows);
+
+		response.send(rows);
+	});
+
 });
 
-app.post("/messages", function(request, response) {
-	response.send('Store a new message');
+app.post('/messages', function(request, response) {
+	
+	db.run("INSERT INTO Messages VALUES ?", request.body)
+
 });
 
-app.delete("/message", function(request, response) {
-	response.send('Delete a specific message');
+app.delete('/message', function(request, response) {
+
+	db.run("DELET FROM Messages WHERE ?", request.body)
+
 });
 
