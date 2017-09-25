@@ -1,8 +1,12 @@
+
 // Add Express to the project
 var express = require('express');
 
 // Create an Express app object
 var app = express(); 
+
+var bodyParser = require('body-parser');
+
 
 // Instruct the express app to listen on port 3000,
 // and print a message when the server start running
@@ -14,10 +18,11 @@ var sqlite3 = require('sqlite3');
 
 var db = new sqlite3.Database('PortfolioDatabase.db');
 
-// 
-app.get('/', function(request, response) {
-	response.send('Return the index page');
-});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use( express.static( __dirname + '/public'));
 
 app.get('/messages', function(request, response) {
 	
@@ -31,8 +36,6 @@ app.get('/messages', function(request, response) {
 
 app.post('/messages', function(request, response) {
 	
-	db.run("INSERT INTO Messages VALUES ?", request.body)
-
 });
 
 app.delete('/message', function(request, response) {

@@ -135,6 +135,33 @@ var ViewModel = function() {
 		}
 		return self.hideAside();
 	}
+
+    this.formName = document.getElementById("form-name");
+    this.formEmail = document.getElementById("form-email");
+    this.formSubject = document.getElementById("form-subject");
+    this.formMessage = document.getElementById("form-message");
+
+    $("form").submit(function(e) {
+        e.preventDefault();
+        if (self.formName.value == "" || self.formEmail.value == "" || self.formSubject.value == "" || self.formMessage.value == "") {
+            window.alert("Please, fill all the fields");
+        }
+        else {
+            var data = {
+                Name: self.formName.value,
+                Email: self.formEmail.value,
+                Subject: self.formSubject.value,
+                Message: self.formMessage.value
+            }
+
+            $.ajax({
+                url: '/messages', 
+                type: 'POST',
+                contentType: "application/json",
+                data: JSON.stringify(data)
+            });
+        }
+    });
 }
 
 ko.applyBindings(ViewModel);

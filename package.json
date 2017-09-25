@@ -4,12 +4,23 @@
   "description": "A resume and portfolio website",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "VITOR BIGELLI",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/VitorBigelli/portfolio-site.git"
+  },
   "dependencies": {
-    "express": "^4.15.4",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
     "sqlite3": "^3.1.12"
-  }
+  },
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/VitorBigelli/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/VitorBigelli/portfolio-site#readme"
 }
