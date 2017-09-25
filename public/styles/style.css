@@ -99,19 +99,22 @@ aside {
 }
 
 form {
-	width: 100%;
+	width: auto;
 	text-align: left;
+	margin: auto;
 }
-
-
 
 input,
 textarea {
-	width: 100%;
+	width: 300px;
 }
 
 textarea {
 	height: 100px;
+}
+
+p {
+	margin: auto;
 }
 
 .hide {
