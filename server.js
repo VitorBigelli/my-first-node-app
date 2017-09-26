@@ -7,7 +7,7 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 1337;
 
 // Instruct the express app to listen on port 3000,
 // and print a message when the server start running
@@ -24,6 +24,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use( express.static( __dirname + '/public'));
+
+app.get('/', function(request, response) {
+	response.sendFile('/public/index.html');
+})
 
 app.get('/messages', function(request, response) {
 	
