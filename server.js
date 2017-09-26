@@ -7,10 +7,11 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
+var port = process.env.PORT || 3000;
 
 // Instruct the express app to listen on port 3000,
 // and print a message when the server start running
-app.listen(3000, function() {
+app.listen(port, function() {
 	console.log("Server is listening on port 3000");
 })
 
