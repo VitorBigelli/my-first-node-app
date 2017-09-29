@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static( __dirname + '/public'));
 
 app.get('/', function(request, response) {
-	response.sendFile(path.join(__dirname, 'public', 'index.html');
+	response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/messages', function(request, response) {
