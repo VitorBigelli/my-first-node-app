@@ -4,7 +4,7 @@ var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
-
+var path = require('path');
 // Create an Express app object
 var app = express(); 
 
@@ -19,7 +19,11 @@ var db = new sqlite3.Database('PortfolioDatabase.db');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', express.static( __dirname + '/public'));
+app.use(express.static( __dirname + '/public'));
+
+app.get('/', function(request, response) {
+	response.sendFile(path.join(__dirname, 'public', 'index.html');
+})
 
 app.get('/messages', function(request, response) {
 	
