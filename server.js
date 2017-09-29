@@ -1,33 +1,25 @@
 
 // Add Express to the project
 var express = require('express');
+var http = require('http');
+var bodyParser = require('body-parser');
+var sqlite3 = require('sqlite3');
 
 // Create an Express app object
 var app = express(); 
 
-var bodyParser = require('body-parser');
-
 var port = process.env.PORT || 1337;
+
+var db = new sqlite3.Database('PortfolioDatabase.db');
 
 // Instruct the express app to listen on port 3000,
 // and print a message when the server start running
-app.listen(port, function() {
-	console.log("Server is listening on port 3000");
-})
-
-var sqlite3 = require('sqlite3');
-
-var db = new sqlite3.Database('PortfolioDatabase.db');
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use( express.static( __dirname + '/public'));
-
-app.get('/', function(request, response) {
-	response.sendFile('/public/index.html');
-})
+app.use('/', express.static( __dirname + '/public'));
 
 app.get('/messages', function(request, response) {
 	
@@ -46,8 +38,13 @@ app.post('/messages', function(request, response) {
 });
 
 app.delete('/message', function(request, response) {
-
 	db.run("DELET FROM Messages WHERE ID = (?)", request.body)
-
 });
+
+app.listen(port, function() {
+	console.log("Listening on " + port);
+})
+
+
+
 
